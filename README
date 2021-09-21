@@ -1,1 +1,15 @@
 This is a personal project where I attempted to teach myself Hidden Markov Models and predict the price of bitcoin. 
+
+I took this dataset from cryptodatadownload.com/data/gemini, and proceeded to clean it up, in order to get a quality dataframe. 
+
+I decided to precit that there were three kinds of volatility: low, moderate, and high. So there were essentially three hidden states. 
+
+Each row of the dataset contains the high, low, and open price of bitcoin. I started the data training from 1/1/2017, since before that date, there wasn't a lot of movement in the market.
+
+I proceeded to graph the difference in te opening price and display it. 
+
+Then using an HMM package, I found the proabilities of starting in each state and the transistion matrix(the probability of going from one state to another). 
+
+Then using a pseudo markvo model, I multiplied the price by 1 + the percent difference, and then construct a model for the next value that fits well with the actual values.
+
+These predictions are graphed at the bottom of my notebook. 
